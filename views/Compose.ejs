@@ -1,0 +1,29 @@
+<%- include("header"); -%>
+
+
+<h1 class="col-md-8 offset-md-2">
+    COMPOSE
+</h1>
+
+
+<form action ="/Compose" method ="post">
+    
+    <div class="form-group col-md-8 offset-md-2" >
+      <label for="Cotent">Title</label>
+
+      <input class = "form-control" type="text"  name ="titlebody" placeholder="Write the title">
+      <br>
+
+      <label for="content">Content</label>
+
+      <textarea class="form-control" rows="5" name="comment" placeholder="Write your content here"></textarea>
+     <br>
+
+      <button type="submit" class="btn btn-primary" >Publish</button>
+
+    </div>
+    
+</form>
+
+
+<%- include("footer"); -%>

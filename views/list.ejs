@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>BLOG WEBSITE</title>
+</head>
+<body>
+    <%- include('header'); -%>
+   <div class = "box col-md-8 offset-md-2" id = "heading">
+       <h1> PROJECTS</h1>
+   </div>
+
+   <div class="box col-md-8 offset-md-2">
+       <% Posts.forEach(function(post){ %>
+    <form action="/delete" method ="post">
+        <div class ="item">
+            <input name = "checkBox" type ="checkbox" value="<%= post._id %>" onChange="this.form.submit()">
+            <p> <%= post.details %> </p>
+        </div>
+    </form>
+
+       <% }); %>
+   </div>
+  
+   <form class ="item col-md-8 offset-md-2" action="/" method = "post">
+     <input type ="text" name ="newpost" placeholder ="Add new post" autocomplete="off">
+     <button type ="submit" name="list">+</button>
+   </form>
+    <%- include('footer'); -%>
+
+
+</body>
+</html>
